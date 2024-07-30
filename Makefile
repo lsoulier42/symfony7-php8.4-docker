@@ -11,9 +11,8 @@ DOCKER_COMPOSE_DEV = docker compose
 install:
 	$(DOCKER_COMPOSE_DEV) build
 	$(MAKE) composer-install
-	$(MAKE) composer-update
-	$(MAKE) node-install
-	$(MAKE) node-build
+	$(MAKE) assets-install
+	$(MAKE) start
 
 composer-install:
 	$(DOCKER_COMPOSE_DEV) run --rm php bash -ci 'php -d memory_limit=4G bin/composer install'
@@ -36,11 +35,8 @@ connect:
 clear:
 	php ./bin/console cache:clear
 
-node-install:
-	$(DOCKER_COMPOSE_DEV) run --rm nodejs ash -ci 'npm install'
+assets-install:
+	$(DOCKER_COMPOSE_DEV) run --rm php bash -ci 'php -d memory_limit=4G ./bin/console importmap:install'
 
-node-build:
-	$(DOCKER_COMPOSE_DEV) run --rm nodejs ash -ci 'npm run build'
-
-node-connect:
-	$(DOCKER_COMPOSE_DEV) exec nodejs ash
+assets-compile:
+	$(DOCKER_COMPOSE_DEV) run --rm php bash -ci 'php -d memory_limit=4G ./bin/console asset-map:compile'
