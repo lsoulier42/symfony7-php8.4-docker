@@ -2,6 +2,7 @@
 /public/build/images/glyphicons-*
 
 .php-version
+.composer
 
 ###> symfony/framework-bundle ###
 /.env.local
@@ -19,13 +20,6 @@
 .phpunit.result.cache
 /phpunit.xml
 ###< symfony/phpunit-bridge ###
-
-###> symfony/webpack-encore-bundle ###
-/node_modules/
-npm-debug.log
-yarn-error.log
-###< symfony/webpack-encore-bundle ###
-
 .idea
 /docker/db/postgresql/
 !/docker/db/.gitkeep
@@ -36,3 +30,12 @@ yarn-error.log
 ###> lexik/jwt-authentication-bundle ###
 /config/jwt/*.pem
 ###< lexik/jwt-authentication-bundle ###
+
+###> phpstan/phpstan ###
+phpstan.neon
+###< phpstan/phpstan ###
+
+###> symfony/asset-mapper ###
+/public/assets/
+/assets/vendor/
+###< symfony/asset-mapper ###

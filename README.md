@@ -1,21 +1,11 @@
 # Symfony6-docker
 
-Starter kit pour applications Symfony
+Starter kit pour applications Symfony - maj juillet 2024
 
 ## Specifications:
-- php 8.1 (à partir de l'image v4-fpm de the-coding-machine)
-- symfony 6.2 mode webapp, avec webpack-encore
-- composer 2.5
-- postgresql 15
-- nginx 1.23.4-alpine
-- node-js 19-alpine (npm@latest, jquery 3.6, bootstrap 5 et fontawesome 6)
-- mailcatcher
-- Versions utilisées pour le build : docker-20.10.12 / docker-compose-1.29.2
-
-## Quality tools:
-- phpstan 1.10
-- squizlabs/php_codesniffer 3.7
-- phpunit 9.5
+- php 8.3
+- symfony 6.4
+- postgresql 16
 
 ## Utilisation :
 - make install : build des images docker, composer install, npm install et build assets
@@ -27,4 +17,4 @@ Starter kit pour applications Symfony
 - make node-install : installation des vendors js
 - make node-build : compilation des assets js et scss
 
-- url par défaut en mode dev : http://localhost:8180
+- url par défaut en mode dev : http://localhost:8081

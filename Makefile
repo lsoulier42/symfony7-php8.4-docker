@@ -6,7 +6,7 @@ export HOST_UID
 export HOST_USER
 export HOST_GROUP_ID
 
-DOCKER_COMPOSE_DEV = docker-compose
+DOCKER_COMPOSE_DEV = docker compose
 
 install:
 	$(DOCKER_COMPOSE_DEV) build
@@ -22,6 +22,9 @@ composer-update:
 	$(DOCKER_COMPOSE_DEV) run --rm php bash -ci 'php -d memory_limit=4G bin/composer update -W'
 
 start:
+	$(DOCKER_COMPOSE_DEV) up -d
+
+start-verbose:
 	$(DOCKER_COMPOSE_DEV) up
 
 stop:
