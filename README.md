@@ -1,10 +1,10 @@
-# Symfony6-docker
+# Symfony7-php8.4-docker
 
 Starter kit pour applications Symfony
 
 ## Specifications:
-- php 8.3
-- symfony 6.4
+- php 8.4
+- symfony 7.2
 - postgresql 16
 
 ## Utilisation :
