@@ -2,6 +2,15 @@
     "babdev/pagerfanta-bundle": {
         "version": "v4.4.0"
     },
+    "doctrine/deprecations": {
+        "version": "1.1",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "main",
+            "version": "1.0",
+            "ref": "87424683adc81d7dc305eefec1fced883084aab9"
+        }
+    },
     "doctrine/doctrine-bundle": {
         "version": "2.9",
         "recipe": {
@@ -197,18 +206,6 @@
             "config/packages/monolog.yaml"
         ]
     },
-    "symfony/notifier": {
-        "version": "6.2",
-        "recipe": {
-            "repo": "github.com/symfony/recipes",
-            "branch": "main",
-            "version": "5.0",
-            "ref": "c31585e252b32fe0e1f30b1f256af553f4a06eb9"
-        },
-        "files": [
-            "config/packages/notifier.yaml"
-        ]
-    },
     "symfony/phpunit-bridge": {
         "version": "6.2",
         "recipe": {
@@ -222,6 +219,18 @@
             "bin/phpunit",
             "phpunit.xml.dist",
             "tests/bootstrap.php"
+        ]
+    },
+    "symfony/property-info": {
+        "version": "7.4",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "main",
+            "version": "7.3",
+            "ref": "dae70df71978ae9226ae915ffd5fad817f5ca1f7"
+        },
+        "files": [
+            "config/packages/property_info.yaml"
         ]
     },
     "symfony/routing": {
